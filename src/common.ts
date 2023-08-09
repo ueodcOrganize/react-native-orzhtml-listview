@@ -1,4 +1,6 @@
 import { ListRenderItem, RefreshControlProps, StyleProp, TextStyle, ViewStyle } from 'react-native'
+import {NativeSyntheticEvent} from "react-native/Libraries/Types/CoreEventTypes";
+import {NativeScrollEvent} from "react-native/Libraries/Components/ScrollView/ScrollView";
 
 export interface PaginationStatusProps {
     FIRST_LOAD: number,
@@ -72,6 +74,9 @@ export interface OrzhtmlListProps {
     paginationBtnStyle?: StyleProp<ViewStyle>,
     paginationBtnTextStyle?: StyleProp<TextStyle>,
     waitingSpinnerTextStyle?: StyleProp<TextStyle>,
+    onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void
+    onScrollBeginDrag?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void
+    onScrollEndDrag?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void
 }
 
 export interface OrzhtmlListViewProps extends OrzhtmlListProps {

@@ -315,6 +315,9 @@ const OrzhtmlListView: FC<OrzhtmlListViewProps> = (props) => {
       ListHeaderComponent={_ListHeaderComponent()}
       onEndReached={onEndReached}
       refreshControl={_RenderRefreshControl()}
+      onScroll={props.onScroll}
+      onScrollBeginDrag={props.onScrollBeginDrag}
+      onScrollEndDrag={props.onScrollEndDrag}
     />
   )
 }
